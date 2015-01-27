@@ -7,17 +7,17 @@ public class PrimeNumbers {
                                       //status -> a variable that helps to generate prime numbers
                                       //num -> initial number (starting point)
     public void methodread(){
-	Scanner in = new Scanner(System.in);
+	Scanner in = new Scanner(System.in); // create an instance of the class System
 	System.out.println("Prime numbers that you want to display: ");
 	n = in.nextInt();
 
 	if (n >= 1) {
 	    System.out.println("First " + n + " primes of the numbers "
-		    + num + " are:-");
+		    + num + " are:-"); 
 	}
     }
-    public void methodPrim(){
-	Collection<Integer> Primelist = new ArrayList<Integer>();
+    public void methodPrim(){ // method which calculates prime numbers
+	Collection<Integer> Primelist = new ArrayList<Integer>(); // create an instance of ArrayList
 	for (int i = 1; i <= n;) {
 	    for (int j = 2; j < num; j++) {
 		if (num % j == 0) {
@@ -27,7 +27,7 @@ public class PrimeNumbers {
 	    }
 	    if (status != 0) {
 		System.out.println(num + "");
-		Primelist.add(num);
+		Primelist.add(num); // store in the variable primes Primelist
 		i++;
 	    }
 	    status = 1;
