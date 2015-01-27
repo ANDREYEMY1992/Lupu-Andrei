@@ -7,12 +7,12 @@ public class PrimeNumbers {
 
     public void methodread(){
 	Scanner in = new Scanner(System.in);
-	System.out.println("Numerele prime pe care le vrei sa le afisezi: ");
+	System.out.println("Prime numbers that you want to display: ");
 	n = in.nextInt();
 
 	if (n >= 1) {
-	    System.out.println("Primele " + n + " numere prime de la cifra "
-		    + num + " sunt:-");
+	    System.out.println("First " + n + " primes of the numbers "
+		    + num + " are:-");
 	}
     }
     public void methodPrim(){
@@ -41,9 +41,9 @@ public class PrimeNumbers {
 		if (numbersprime[k] != null && numbersprime[i] != null) {
 		    temp += numbersprime[k];
 		    if (temp == numbersprime[i]) {
-			System.out.print("numarul "
+			System.out.print("number "
 					+ numbersprime[i]
-					+ " se poate scrie ca suma de numere prime mai mici \n");
+					+ " can be written as the sum of primes less. \n");
 			k = 0;
 			break;
 		    }
