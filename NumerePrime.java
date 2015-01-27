@@ -3,8 +3,9 @@ package Problema_Pentalog;
 import java.util.*;
 
 public class PrimeNumbers {
-    static int n, status = 1, num = 2;
-
+    static int n, status = 1, num = 2; //n -> a variable that generates many primes as we
+                                      //status -> a variable that helps to generate prime numbers
+                                      //num -> initial number (starting point)
     public void methodread(){
 	Scanner in = new Scanner(System.in);
 	System.out.println("Prime numbers that you want to display: ");
