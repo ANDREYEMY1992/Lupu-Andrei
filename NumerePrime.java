@@ -1,11 +1,11 @@
-package ProblemaPentalog;
+package Problema_Pentalog;
 
 import java.util.*;
 
-public class NumerePrime {
+public class PrimeNumbers {
     static int n, status = 1, num = 2;
 
-    public void metodacitire(){
+    public void methodread(){
 	Scanner in = new Scanner(System.in);
 	System.out.println("Numerele prime pe care le vrei sa le afisezi: ");
 	n = in.nextInt();
@@ -15,8 +15,8 @@ public class NumerePrime {
 		    + num + " sunt:-");
 	}
     }
-    public void metodaPrim(){
-	Collection<Integer> listaIntregiPrimi = new ArrayList<Integer>();
+    public void methodPrim(){
+	Collection<Integer> Primelist = new ArrayList<Integer>();
 	for (int i = 1; i <= n;) {
 	    for (int j = 2; j < num; j++) {
 		if (num % j == 0) {
@@ -26,29 +26,27 @@ public class NumerePrime {
 	    }
 	    if (status != 0) {
 		System.out.println(num + "");
-		listaIntregiPrimi.add(num);
+		Primelist.add(num);
 		i++;
 	    }
 	    status = 1;
 	    num++;
 	}
-	Integer[] numerePrime = new Integer[100];
-	listaIntregiPrimi.toArray(numerePrime);
-	for (int i = 0; i < numerePrime.length; i++) {
+	Integer[] numbersprime = new Integer[100];
+	Primelist.toArray(numbersprime);
+	for (int i = 0; i < numbersprime.length; i++) {
 	    int temp = 0;
 	    for (int k = 0; k < i; k++) {
 
-		if (numerePrime[k] != null && numerePrime[i] != null) {
-		    temp += numerePrime[k];
-		    if (temp == numerePrime[i]) {
+		if (numbersprime[k] != null && numbersprime[i] != null) {
+		    temp += numbersprime[k];
+		    if (temp == numbersprime[i]) {
 			System.out.print("numarul "
-					+ numerePrime[i]
+					+ numbersprime[i]
 					+ " se poate scrie ca suma de numere prime mai mici \n");
 			k = 0;
 			break;
 		    }
-		   //afiseaza doar cateva numere ce se pot scrie ca suma de alte
-		   //numere mai mici prime consecutive...
 		}
 	    }
 	}
