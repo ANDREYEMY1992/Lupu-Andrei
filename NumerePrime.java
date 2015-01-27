@@ -26,22 +26,22 @@ public class PrimeNumbers {
 		}
 	    }
 	    if (status != 0) {
-		System.out.println(num + "");
+		System.out.println(num + ""); //Show numbers prime
 		Primelist.add(num); // store in the variable primes Primelist
 		i++;
 	    }
 	    status = 1;
 	    num++;
 	}
-	Integer[] numbersprime = new Integer[100];
+	Integer[] numbersprime = new Integer[100]; // create a court to browse prime numbers
 	Primelist.toArray(numbersprime);
 	for (int i = 0; i < numbersprime.length; i++) {
-	    int temp = 0;
+	    int temp = 0; // create a variable to help us gather past numbers
 	    for (int k = 0; k < i; k++) {
 
 		if (numbersprime[k] != null && numbersprime[i] != null) {
-		    temp += numbersprime[k];
-		    if (temp == numbersprime[i]) {
+		    temp += numbersprime[k]; // gather the previous numbers in temp until temp is equal
+		    if (temp == numbersprime[i]) { //number prim to iterative i
 			System.out.print("number "
 					+ numbersprime[i]
 					+ " can be written as the sum of primes less. \n");
